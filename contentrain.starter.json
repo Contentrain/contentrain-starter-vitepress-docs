@@ -1,0 +1,17 @@
+{
+  "stack": "node",
+  "locales": ["en"],
+  "domains": ["system", "docs", "guides", "reference", "packages"],
+  "models": [
+    "site-settings",
+    "navigation",
+    "footer",
+    "seo-defaults",
+    "docs-page",
+    "guide-page",
+    "reference-page",
+    "package-page"
+  ],
+  "seed_demo_content": true,
+  "visual_theme": "atlas_docs"
+}

@@ -1,0 +1,20 @@
+{
+  "display_name": "Contentrain VitePress Docs",
+  "repository_name": "contentrain-starter-vitepress-docs",
+  "repository_description": "VitePress documentation starter with Contentrain-managed Markdown pages, generated SDK client, and docs-native content architecture.",
+  "repository_topics": ["contentrain", "vitepress", "starter", "documentation", "markdown", "typescript"],
+  "visibility": "public",
+  "template_repository": true,
+  "framework": "vitepress",
+  "node_version": "22",
+  "package_manager": "pnpm@10.17.0",
+  "install_command": "pnpm install",
+  "check_command": "pnpm check",
+  "build_command": "pnpm build",
+  "preview_command": "pnpm preview",
+  "deploy_targets": [
+    { "provider": "vercel", "output": "docs/.vitepress/dist", "command": "pnpm deploy:vercel" },
+    { "provider": "netlify", "output": "docs/.vitepress/dist", "command": "pnpm deploy:netlify" },
+    { "provider": "cloudflare-pages", "output": "docs/.vitepress/dist", "command": "pnpm deploy:cloudflare" }
+  ]
+}

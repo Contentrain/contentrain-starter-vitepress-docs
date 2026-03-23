@@ -1,0 +1,7 @@
+{
+  "default_locale": "en",
+  "og_image": "https://images.unsplash.com/photo-1743385779312-73ea241025d8?auto=format&fit=crop&fm=jpg&q=80&w=1600",
+  "site_name": "Atlas Docs",
+  "site_tagline": "A docs-native starter that proves Contentrain can manage real Markdown information architecture, not only marketing pages.",
+  "theme_name": "atlas_docs"
+}
