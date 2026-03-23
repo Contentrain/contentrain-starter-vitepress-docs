@@ -8,38 +8,27 @@ title: Starter Contracts
 
 # Starter Contracts
 
-## Required starter files
+## Public starter files
 
-Every starter in this repository includes:
+A published starter should keep only files that are useful to the adopter:
 
 - `package.json`
+- framework config files
+- `.contentrain/` models and content
+- generated `#contentrain` client
+- starter-specific README
+- CI workflow
+- license and editor config files
+
+## Source-only files
+
+Some files belong only in the source monorepo and should not be shipped in exported starter repositories:
+
+- `contentrain.seed.json`
+- `contentrain.starter.json`
 - `starter.manifest.json`
 - `starter.release.json`
-- `contentrain.starter.json`
-- `contentrain.seed.json`
 
-## Manifest rules
+## Why this separation matters
 
-A starter manifest must declare:
-
-- starter id
-- framework
-- category
-- visual family
-- deploy targets
-- model list
-- section list
-
-## Release rules
-
-Release metadata defines the public repository surface:
-
-- repository name
-- description
-- topics
-- deploy outputs
-- preview and build commands
-
-## Validation
-
-The repo validation script checks that every starter directory contains the required files and that starter manifests meet minimum structural expectations.
+Published starter repositories should stay easy to understand. Runtime content, schema, and deploy configuration belong in the public repo. Internal release metadata and source seeding files do not.

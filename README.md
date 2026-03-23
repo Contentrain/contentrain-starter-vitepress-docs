@@ -11,8 +11,6 @@ pnpm install
 pnpm dev
 ```
 
-From the monorepo root you can also run `pnpm dev:vitepress-docs`.
-
 ## Commands
 
 ```bash
@@ -30,8 +28,8 @@ pnpm preview
   - [Docs](https://docs.contentrain.io/)
   - [Studio](https://studio.contentrain.io/)
 
-If you change shared models or seed content from the monorepo, regenerate the local SDK first:
+If you change `.contentrain/models` or `.contentrain/content`, regenerate the local SDK first:
 
 ```bash
-pnpm contentrain:prepare
+pnpm contentrain:generate
 ```

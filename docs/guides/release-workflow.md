@@ -8,49 +8,36 @@ title: Release Workflow
 
 # Release Workflow
 
-## Source model
+## Local verification
 
-The monorepo is the source of truth for:
-
-- design tokens
-- content blueprints
-- starter recipes
-- validation and export scripts
-
-## Distribution model
-
-Every starter is published as its own repository.
-
-That keeps onboarding simple:
-
-- users clone one starter
-- framework docs stay native
-- examples and release notes stay focused
-
-## Export flow
+Before deploying this starter, run:
 
 ```bash
-pnpm contentrain:prepare
-pnpm exec turbo run check build
-pnpm export:all
+pnpm check
+pnpm build
 ```
 
-## Public repository defaults
+## Production preview
 
-Exported starter repos should ship with:
+```bash
+pnpm preview
+```
 
-- committed `.contentrain/` content
-- generated SDK client
-- CI workflow
-- `.nvmrc` pinned to Node 22
+## What ships in the public starter
+
+This repository is intentionally self-contained:
+
+- committed `.contentrain/` models and content
+- generated `#contentrain` SDK client
 - starter-specific README
-- release metadata
+- CI workflow
+- pinned Node version via `.nvmrc`
 - MIT license
 
-## Publish checklist
+## Deploy checklist
 
-1. Push `dist/<starter>` to a public repository.
-2. Enable GitHub template repository mode.
-3. Apply description and topic metadata from `starter.release.json`.
-4. Verify CI passes.
-5. Attach preview deployment when available.
+1. Connect the repository to your deployment provider.
+2. Use `pnpm install` as the install step.
+3. Use `pnpm build` as the build step.
+4. Set the publish directory to `docs/.vitepress/dist` for static hosts.
+5. Verify navigation, sidebar routes, and search in preview.

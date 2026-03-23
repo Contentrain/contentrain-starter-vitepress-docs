@@ -17,16 +17,15 @@ pnpm dev
 
 The starter runs VitePress against the real `docs/` directory.
 
-## Regenerate content after schema changes
+## Regenerate the SDK after local content changes
+
+If you edit files under `.contentrain/models` or `.contentrain/content`, regenerate the typed SDK client:
 
 ```bash
-pnpm contentrain:prepare
+pnpm contentrain:generate
 ```
 
-This does two things:
-
-1. Syncs local Contentrain data and model files from the starter seed definitions.
-2. Regenerates the typed SDK client that VitePress uses to build navigation and sidebars.
+This refreshes the `#contentrain` client that VitePress uses to build navigation and sidebars.
 
 ## Deploy flow
 
