@@ -5,69 +5,9 @@
     "description": {
       "type": "text"
     },
-    "features": {
-      "items": {
-        "fields": {
-          "details": {
-            "required": true,
-            "type": "text"
-          },
-          "icon": {
-            "type": "string"
-          },
-          "title": {
-            "required": true,
-            "type": "string"
-          }
-        },
-        "type": "object"
-      },
-      "type": "array"
-    },
-    "hero": {
-      "fields": {
-        "actions": {
-          "items": {
-            "fields": {
-              "link": {
-                "required": true,
-                "type": "string"
-              },
-              "text": {
-                "required": true,
-                "type": "string"
-              },
-              "theme": {
-                "options": [
-                  "brand",
-                  "alt"
-                ],
-                "type": "select"
-              }
-            },
-            "type": "object"
-          },
-          "type": "array"
-        },
-        "image": {
-          "type": "image"
-        },
-        "name": {
-          "type": "string"
-        },
-        "tagline": {
-          "type": "text"
-        },
-        "text": {
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
     "layout": {
       "options": [
-        "doc",
-        "home"
+        "doc"
       ],
       "type": "select"
     },

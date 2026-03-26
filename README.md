@@ -23,6 +23,7 @@ pnpm preview
 
 - Long-form docs pages are modeled as Contentrain `document` models and written into the real `docs/` tree through `content_path` overrides
 - VitePress navigation and sidebar structure are generated from Contentrain content, not hardcoded arrays
+- Starter-local `.contentrain/context.json`, `vocabulary.json`, and `meta/` files are committed so the repo opens with a complete Contentrain project shape
 - Official references are built in:
   - [SDK](https://ai.contentrain.io/packages/sdk.html)
   - [Docs](https://docs.contentrain.io/)
@@ -32,4 +33,10 @@ If you change `.contentrain/models` or `.contentrain/content`, regenerate the lo
 
 ```bash
 pnpm contentrain:generate
+```
+
+To validate the on-disk Contentrain project itself:
+
+```bash
+pnpm exec contentrain validate --json
 ```

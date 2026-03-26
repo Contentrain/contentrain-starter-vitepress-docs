@@ -20,18 +20,6 @@ type BaseDoc = {
   order?: number;
 };
 
-type DocsHome = DocsPage & {
-  layout?: "doc" | "home";
-  hero?: {
-    name?: string;
-    text?: string;
-    tagline?: string;
-    image?: string;
-    actions?: Array<{ text: string; link: string; theme?: "brand" | "alt" }>;
-  };
-  features?: Array<{ title: string; details: string; icon?: string }>;
-};
-
 type NavigationItem = NonNullable<Navigation["items"]>[number];
 
 const site = singleton("site-settings").get() as SiteSettings;
@@ -41,7 +29,7 @@ const seo = singleton("seo-defaults").get() as SeoDefaults;
 
 const docsPages = document("docs-page")
   .all()
-  .sort((left: DocsHome, right: DocsHome) => Number(left.order ?? 0) - Number(right.order ?? 0)) as DocsHome[];
+  .sort((left: DocsPage, right: DocsPage) => Number(left.order ?? 0) - Number(right.order ?? 0)) as BaseDoc[];
 const guidePages = document("guide-page")
   .all()
   .sort((left: GuidePage, right: GuidePage) => Number(left.order ?? 0) - Number(right.order ?? 0)) as BaseDoc[];

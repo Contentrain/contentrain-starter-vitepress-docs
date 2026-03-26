@@ -30,7 +30,7 @@ Canonical base, default title, description, and OG image.
 
 ### `docs-page`
 
-Root docs pages. This model can also describe a VitePress home page through optional `layout`, `hero`, and `features` fields.
+Root docs pages for index and top-level documentation routes, kept intentionally flat so they remain fully compatible with Contentrain document frontmatter validation.
 
 ### `guide-page`
 

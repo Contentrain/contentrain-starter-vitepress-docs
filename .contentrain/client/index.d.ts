@@ -9,9 +9,7 @@ export interface DocsPage {
   slug: string
   content: string
   description?: string
-  features?: { details: string; icon?: string; title: string }[]
-  hero?: { actions?: { link: string; text: string; theme?: 'brand' | 'alt' }[]; image?: string; name?: string; tagline?: string; text?: string }
-  layout?: 'doc' | 'home'
+  layout?: 'doc'
   order?: number
   sidebar_label?: string
   slug: string
