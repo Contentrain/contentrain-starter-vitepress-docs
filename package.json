@@ -13,9 +13,7 @@
     "preview": "vitepress preview docs --host 127.0.0.1 --port 4175",
     "check": "tsc --noEmit -p tsconfig.json",
     "contentrain:generate": "contentrain generate",
-    "deploy:vercel": "pnpm build",
-    "deploy:netlify": "pnpm build",
-    "deploy:cloudflare": "pnpm build"
+    "deploy:netlify": "pnpm build"
   },
   "dependencies": {
     "@contentrain/query": "^5.1.0"

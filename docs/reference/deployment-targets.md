@@ -8,14 +8,12 @@ title: Deployment Targets
 
 # Deployment Targets
 
-This starter is designed for static deployment providers.
+This starter is designed for Netlify-first static deployment.
 
-## Recommended outputs
+## Netlify output
 
-- Vercel: `docs/.vitepress/dist`
 - Netlify: `docs/.vitepress/dist`
-- Cloudflare Pages: `docs/.vitepress/dist`
 
 ## Build contract
 
-Use `pnpm build` and ensure the project root remains the repository root so the generated `#contentrain` client is available during build.
+Use `pnpm deploy:netlify` and ensure the project root remains the repository root so the generated `#contentrain` client is available during build.

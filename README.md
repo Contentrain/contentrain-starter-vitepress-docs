@@ -27,6 +27,7 @@ pnpm dev
 pnpm check
 pnpm build
 pnpm preview
+pnpm deploy:netlify
 ```
 
 ## Contentrain Architecture
@@ -51,3 +52,9 @@ To validate the on-disk Contentrain project itself:
 ```bash
 pnpm exec contentrain validate --json
 ```
+
+## Deploy
+
+- Netlify build command: `pnpm deploy:netlify`
+- Netlify publish directory: `docs/.vitepress/dist`
+- `netlify.toml` is committed in the starter root

@@ -35,4 +35,4 @@ pnpm build
 pnpm preview
 ```
 
-The build output lands in `docs/.vitepress/dist`, which is ready for Vercel, Netlify, or Cloudflare Pages.
+The build output lands in `docs/.vitepress/dist`, which is ready for Netlify.
