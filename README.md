@@ -4,6 +4,10 @@
 
 Documentation starter for teams that want Markdown-native docs with Contentrain-managed schema, navigation, and long-form content.
 
+![Contentrain VitePress Docs cover](./media/cover.png)
+
+![Contentrain VitePress Docs preview](./media/preview.gif)
+
 ## Demo routes
 
 - `/`
