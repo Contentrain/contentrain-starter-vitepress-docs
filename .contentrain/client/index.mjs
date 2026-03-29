@@ -8,11 +8,13 @@ import _docsPageGettingStarted from './data/docs-page--getting-started.mjs'
 import _docsPageIndex from './data/docs-page--index.mjs'
 import _footerEn from './data/footer.en.mjs'
 import _guidePageContentArchitecture from './data/guide-page--content-architecture.mjs'
+import _guidePageProductSurfaces from './data/guide-page--product-surfaces.mjs'
 import _guidePageReleaseWorkflow from './data/guide-page--release-workflow.mjs'
 import _navigationEn from './data/navigation.en.mjs'
 import _packagePageContentBlueprints from './data/package-page--content-blueprints.mjs'
 import _packagePageDesignTokens from './data/package-page--design-tokens.mjs'
 import _referencePageContentrainModels from './data/reference-page--contentrain-models.mjs'
+import _referencePageDeploymentTargets from './data/reference-page--deployment-targets.mjs'
 import _referencePageStarterContracts from './data/reference-page--starter-contracts.mjs'
 import _seoDefaultsEn from './data/seo-defaults.en.mjs'
 import _siteSettingsEn from './data/site-settings.en.mjs'
@@ -137,13 +139,13 @@ const _doc_docs_page = new Map([
   ['_default', [_docsPageGettingStarted, _docsPageIndex]],
 ])
 const _doc_guide_page = new Map([
-  ['_default', [_guidePageContentArchitecture, _guidePageReleaseWorkflow]],
+  ['_default', [_guidePageContentArchitecture, _guidePageProductSurfaces, _guidePageReleaseWorkflow]],
 ])
 const _doc_package_page = new Map([
   ['_default', [_packagePageContentBlueprints, _packagePageDesignTokens]],
 ])
 const _doc_reference_page = new Map([
-  ['_default', [_referencePageContentrainModels, _referencePageStarterContracts]],
+  ['_default', [_referencePageContentrainModels, _referencePageDeploymentTargets, _referencePageStarterContracts]],
 ])
 
 const _documentRegistry = {
