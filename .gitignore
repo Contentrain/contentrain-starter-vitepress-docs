@@ -1,12 +1,9 @@
 node_modules
-.astro
-.nuxt
-.next
-.output
-.svelte-kit
-build
-dist
-coverage
+docs/.vitepress/dist
+docs/.vitepress/cache
+.netlify
+.env
+.env.*
 *.tsbuildinfo
 .DS_Store
 .contentrain/.cache/

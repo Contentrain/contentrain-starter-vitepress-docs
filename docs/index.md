@@ -13,6 +13,6 @@ Most starter libraries stop at marketing pages. This one proves that Contentrain
 
 ## Official surfaces
 
-- [SDK and package reference](https://ai.contentrain.io/packages/sdk.html)
+- [SDK and package reference](https://ai.contentrain.io/packages/sdk)
 - [Product documentation](https://docs.contentrain.io/)
 - [Studio UI](https://studio.contentrain.io/)

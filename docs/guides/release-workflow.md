@@ -1,5 +1,5 @@
 ---
-description: How the monorepo becomes separate public starter repositories.
+description: How to verify, preview, and deploy this starter.
 order: 2
 sidebar_label: Release Workflow
 slug: release-workflow
@@ -13,6 +13,7 @@ title: Release Workflow
 Before deploying this starter, run:
 
 ```bash
+pnpm contentrain:validate
 pnpm check
 pnpm build
 ```
