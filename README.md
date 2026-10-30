@@ -1,70 +1,71 @@
-> Source of truth: this starter is exported from the `contentrain-starters` monorepo.
-> Internal starter id: `vitepress-docs`.
+<!-- cover -->
 # Contentrain VitePress Docs
 
-Documentation starter for teams that want Markdown-native docs with Contentrain-managed schema, navigation, and long-form content.
-
-![Contentrain VitePress Docs cover](./media/cover.png)
+A documentation starter built with VitePress. Its Markdown pages, navigation, and sidebar are managed by [Contentrain](https://ai.contentrain.io), the content governance ecosystem for teams and AI agents.
 
 ![Contentrain VitePress Docs preview](./media/preview.gif)
 
-## Demo routes
+## What it shows
 
-- `/`
-- `/getting-started`
-- `/guides/content-architecture`
-- `/guides/product-surfaces`
-- `/reference/contentrain-models`
-- `/reference/deployment-targets`
-- `/packages/design-tokens`
+- Long-form pages as Contentrain `document` models, written straight into the VitePress `docs/` tree through each model's `content_path`. VitePress renders the Markdown files itself.
+- The sidebar built from those models in `docs/.vitepress/config.mts` through the generated `#contentrain` client, ordered by each page's `order` field. There are no hard-coded page arrays.
+- Site name, navigation, footer, and SEO defaults as singletons, read in the same config.
+- Local search, clean URLs, and a static build.
 
-## Start
+Routes: `/`, `/getting-started`, `/guides/*`, `/reference/*`, `/packages/*` (11 pages, including the 404).
+
+## Use this template
+
+1. Click **Use this template** on GitHub to create your own repository.
+2. Optional: connect the new repository in [Contentrain Studio](https://contentrain.io/studio). The repository already contains `.contentrain/`, so Studio opens it as a project. Edits made in Studio are committed to the `contentrain` branch of your repository.
+
+## Quick start
+
+Node 22 and pnpm are required.
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-## Commands
+| Command | What it does |
+|---|---|
+| `pnpm dev` | Start the dev server on port 5175 |
+| `pnpm check` | Type-check the VitePress config and theme |
+| `pnpm build` | Build the static site into `docs/.vitepress/dist` |
+| `pnpm preview` | Serve the built site |
+| `pnpm contentrain:generate` | Regenerate the typed client in `.contentrain/client/` |
+| `pnpm contentrain:validate` | Validate models and content in `.contentrain/` |
 
-```bash
-pnpm check
-pnpm build
-pnpm preview
-pnpm deploy:netlify
-```
+After you change anything in `.contentrain/models`, `.contentrain/content`, or a page's frontmatter, run `pnpm contentrain:generate`.
 
-## Contentrain Architecture
+## Content model
 
-- Long-form docs pages are modeled as Contentrain `document` models and written into the real `docs/` tree through `content_path` overrides
-- VitePress navigation and sidebar structure are generated from Contentrain content, not hardcoded arrays
-- Starter-local `.contentrain/context.json`, `vocabulary.json`, and `meta/` files are committed so the repo opens with a complete Contentrain project shape
-- The docs surface is positioned as part of a wider product-surface system, not as an isolated blog replacement
-- Official references are built in:
-  - [SDK](https://ai.contentrain.io/packages/sdk.html)
-  - [Docs](https://docs.contentrain.io/)
-  - [Studio](https://studio.contentrain.io/)
+| Model | Kind | Where the content lives | Fields |
+|---|---|---|---|
+| `docs-page` | document | `docs/` | `title`, `slug`, `description`, `sidebar_label`, `order`, `layout`, Markdown body |
+| `guide-page` | document | `docs/guides/` | `title`, `slug`, `description`, `sidebar_label`, `order`, Markdown body |
+| `reference-page` | document | `docs/reference/` | `title`, `slug`, `description`, `sidebar_label`, `order`, Markdown body |
+| `package-page` | document | `docs/packages/` | `title`, `slug`, `description`, `sidebar_label`, `order`, Markdown body |
+| `site-settings` | singleton | `.contentrain/content/system/` | `site_name`, `site_tagline`, `default_locale`, `theme_name`, `og_image` |
+| `navigation` | singleton | `.contentrain/content/system/` | `items`, `cta_label`, `cta_href`, `announcement_label` |
+| `footer` | singleton | `.contentrain/content/system/` | `blurb`, `columns`, `legal_notice` |
+| `seo-defaults` | singleton | `.contentrain/content/system/` | `meta_title`, `meta_description`, `canonical_base`, `og_image` |
 
-If you change `.contentrain/models` or `.contentrain/content`, regenerate the local SDK first:
-
-```bash
-pnpm contentrain:generate
-```
-
-To validate the on-disk Contentrain project itself:
-
-```bash
-pnpm exec contentrain validate --json
-```
+Content is in English only.
 
 ## Deploy
 
-- Netlify build command: `pnpm deploy:netlify`
-- Netlify publish directory: `docs/.vitepress/dist`
-- `netlify.toml` is committed in the starter root
-
-## Netlify Project Creation
+The build output is a static site in `docs/.vitepress/dist`. `netlify.toml` is included: build command `pnpm deploy:netlify`, publish directory `docs/.vitepress/dist`, Node 22. See [USAGE.md](./USAGE.md) for Netlify CLI steps.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2FContentrain%2Fcontentrain-starter-vitepress-docs)
 
-Use `pnpm dlx netlify-cli init` to connect the repository for continuous deployment, or `pnpm dlx netlify-cli link` if the site already exists.
+## Contentrain
+
+- SDK, CLI, and MCP docs: [ai.contentrain.io](https://ai.contentrain.io)
+- Query SDK: [ai.contentrain.io/packages/sdk](https://ai.contentrain.io/packages/sdk)
+- Contentrain Studio: [contentrain.io/studio](https://contentrain.io/studio)
+
+## License
+
+[MIT](./LICENSE)

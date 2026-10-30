@@ -25,7 +25,7 @@ export default {
     {
       "links": [
         {
-          "href": "https://ai.contentrain.io/packages/sdk.html",
+          "href": "https://ai.contentrain.io/packages/sdk",
           "label": "SDK"
         },
         {

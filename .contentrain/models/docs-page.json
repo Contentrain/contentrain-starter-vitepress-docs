@@ -1,6 +1,11 @@
 {
-  "content_path": "docs",
+  "id": "docs-page",
+  "kind": "document",
   "domain": "docs",
+  "i18n": false,
+  "title_field": "title",
+  "content_path": "docs",
+  "locale_strategy": "none",
   "fields": {
     "description": {
       "type": "text"
@@ -26,9 +31,5 @@
       "required": true,
       "type": "string"
     }
-  },
-  "i18n": false,
-  "id": "docs-page",
-  "kind": "document",
-  "locale_strategy": "none"
+  }
 }

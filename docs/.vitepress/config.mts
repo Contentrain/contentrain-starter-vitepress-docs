@@ -76,7 +76,7 @@ export default defineConfig({
         text: item.label,
         link: item.href,
       })),
-      { text: "SDK", link: "https://ai.contentrain.io/packages/sdk.html" },
+      { text: "SDK", link: "https://ai.contentrain.io/packages/sdk" },
       { text: "Studio", link: "https://studio.contentrain.io/" },
     ],
     sidebar: {

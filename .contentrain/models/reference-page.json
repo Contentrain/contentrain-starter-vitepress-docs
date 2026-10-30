@@ -1,6 +1,11 @@
 {
-  "content_path": "docs/reference",
+  "id": "reference-page",
+  "kind": "document",
   "domain": "reference",
+  "i18n": false,
+  "title_field": "title",
+  "content_path": "docs/reference",
+  "locale_strategy": "none",
   "fields": {
     "description": {
       "type": "text"
@@ -20,9 +25,5 @@
       "required": true,
       "type": "string"
     }
-  },
-  "i18n": false,
-  "id": "reference-page",
-  "kind": "document",
-  "locale_strategy": "none"
+  }
 }

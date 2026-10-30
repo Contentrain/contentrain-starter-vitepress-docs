@@ -1,5 +1,5 @@
 ---
-description: Manifest, release, and validation rules that every starter in this repo follows.
+description: The files a public Contentrain starter keeps, and why.
 order: 2
 sidebar_label: Starter Contracts
 slug: starter-contracts
@@ -20,15 +20,6 @@ A published starter should keep only files that are useful to the adopter:
 - CI workflow
 - license and editor config files
 
-## Source-only files
-
-Some files belong only in the source monorepo and should not be shipped in exported starter repositories:
-
-- `contentrain.seed.json`
-- `contentrain.starter.json`
-- `starter.manifest.json`
-- `starter.release.json`
-
 ## Why this separation matters
 
-Published starter repositories should stay easy to understand. Runtime content, schema, and deploy configuration belong in the public repo. Internal release metadata and source seeding files do not.
+Published starter repositories should stay easy to understand. Runtime content, schema, and deploy configuration belong in the repository; anything that only served an internal release step does not.
